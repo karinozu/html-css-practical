@@ -1,0 +1,178 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* ヘッダー */
+header {
+    padding: 20px;
+    border-bottom: 2px solid #000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ナビゲーションメニュー */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: 24px; /* 文字サイズを24pxに */
+    color: #000;
+    font-weight: bold;
+}
+
+/* My Profile のリンク */
+h1 a {
+    text-decoration: none;
+    color: #000;
+    border: 2px solid #000;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+/* メイン画像 */
+.main-image {
+    text-align: center;
+}
+
+.responsive-img {
+    width: 100%;
+    height: auto;
+}
+
+/* セクション */
+.about-section, .works-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+/* About - 画像左・テキスト右 */
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.round-img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Aboutテキスト */
+.about-text {
+    flex: 2;
+    max-width: 500px;
+}
+
+/* Works - 画像中央寄せ */
+.works-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.work-item {
+    text-align: left;
+}
+
+.work-item img {
+    width: 250px;
+    height: auto;
+}
+
+/* 画像下のテキストを画像幅に合わせる */
+.work-item p {
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* スマホ対応 */
+@media (max-width: 766px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    /* ナビゲーションのフォントサイズを適切に縮小 */
+    .nav-menu a {
+        font-size: 20px;
+    }
+
+    /* About, Works, 作品ギャラリーは縦並び */
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        margin: 0 auto;
+    }
+
+    .about-text {
+        text-align: left; /* 左揃えに変更 */
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .works-gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .work-item {
+        width: 100%; /* 画面いっぱいに */
+        text-align: center; /* テキストを中央揃え */
+    }
+
+    .work-item img {
+        width: 100%; /* 画像を画面いっぱいに */
+        height: auto;
+    }
+
+    .work-item p {
+        max-width: 100%; /* テキストも幅を調整 */
+        padding: 10px;
+    }
+}
